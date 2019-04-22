@@ -16,7 +16,7 @@ module.exports = {
             .then(dbHeadline => res.json(dbHeadline));
     },
     //update a headline
-    upate: (req, res) => {
+    update: (req, res) => {
         db.Headline
             .findOneAndUpdate({ _id: req.params.id }, { $set: req.body }, { new: true })
             .then(dbHeadline => res.json(dbHeadline));
